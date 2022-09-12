@@ -43,7 +43,7 @@ router.beforeEach((to, from, next) => {
 
   const _isAuthenticated = store.getters._isAuthenticated
 
-  if (_isAuthenticated && to.fullPath =="/login" || to.fullPath =="/register"  ) {
+  if ( _isAuthenticated && to.fullPath =="/login"  ) {
     next(from)
   }
 
